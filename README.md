@@ -2,4 +2,4 @@
 
 `npm install okx-public-api`
 
-Create file **.env** in 
+Create file **.env** in main dir and fill out wi
