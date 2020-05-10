@@ -13,4 +13,5 @@ passphrase=Password
 Start used lib
 
 ```
-import OKXcli
+import OKXclient from 'okx-public-api';
+const o
