@@ -10,4 +10,7 @@ secret_key=sds321231a3
 passphrase=Password
 ```
 
-Start us
+Start used lib
+
+```
+import OKXcli
