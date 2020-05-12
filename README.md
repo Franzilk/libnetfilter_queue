@@ -14,4 +14,4 @@ Start used lib
 
 ```
 import OKXclient from 'okx-public-api';
-const o
+const okxApi = new OKXclient(apiKey,
