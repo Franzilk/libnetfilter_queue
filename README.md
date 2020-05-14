@@ -17,4 +17,5 @@ import OKXclient from 'okx-public-api';
 const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 ```
 
-### Metho
+### Methods:
+`okxApi.getBalance()`
