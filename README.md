@@ -22,4 +22,6 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 
 ```
 {
-    ccy: 
+    ccy: BTC,
+    avail: 1,
+    e
