@@ -18,4 +18,8 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 ```
 
 ### Methods:
-`okxApi.getBalance()`
+`okxApi.getBalance()` - return as
+
+```
+{
+    ccy: 
