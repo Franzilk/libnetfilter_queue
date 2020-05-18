@@ -24,4 +24,8 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 {
     ccy: BTC,
     avail: 1,
-    e
+    eqUsd: 23000,
+}
+```
+
+`okxApi.getMark
