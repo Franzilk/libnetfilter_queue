@@ -28,4 +28,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 }
 ```
 
-`okxApi.getMark
+`okxApi.getMarket(ccy, depth)` - get orde
