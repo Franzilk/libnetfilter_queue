@@ -29,4 +29,9 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 ```
 
 `okxApi.getMarket(ccy, depth)` - get orderbook with depth, parametrs:  
-**ccy** - 'BTC-USDT' 
+**ccy** - 'BTC-USDT'  
+**depth** - 4
+
+```
+{
+    'ask': [[p
