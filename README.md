@@ -34,4 +34,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 
 ```
 {
-    'ask': [[p
+    'ask': [[priceAsk1, amountAsk1], [priceAsk2
