@@ -39,4 +39,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 }
 ```
 
-`okxApi.putOrder
+`okxApi.putOrders(market, spot, countOrd, orderL
