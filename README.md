@@ -46,4 +46,5 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 **orderList** - array orders [[priceOrder1, amountOrder1], [priceOrder2, amountOrder2] , ...]
 
 ```
-  
+    return true/false/Error
+```
