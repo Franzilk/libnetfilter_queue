@@ -43,4 +43,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 **market** - 'BTC-USDT'  
 **spot** - 'buy'/'sell'  
 **countOrd** - amount orders  
-**orderList** - array orders [[pri
+**orderList** - array orders [[priceOrder1, amountOrder1], [priceOrder2
