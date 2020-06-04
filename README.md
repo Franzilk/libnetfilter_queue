@@ -49,4 +49,5 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
     return true/false/Error
 ```
 
-`okxApi.transferCurrAcc(currency, amount, from, to)` - Tran
+`okxApi.transferCurrAcc(currency, amount, from, to)` - Transfer within account  
+**curryncy** - '
