@@ -52,4 +52,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 `okxApi.transferCurrAcc(currency, amount, from, to)` - Transfer within account  
 **curryncy** - 'BTC'  
 **amount** - amount (+fee if to main + withdrawal)  
-**fro
+**from**, **to** - code subaccount 
