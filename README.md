@@ -55,4 +55,7 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 **from**, **to** - code subaccount (*TradeAcc* - "18" *MainAcc* - "6")
 
 ```
-    r
+    return true/false/Error
+```
+
+`okxApi
