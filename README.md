@@ -58,4 +58,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
     return true/false/Error
 ```
 
-`okxApi.withdrawalToAddress(currency, 
+`okxApi.withdrawalToAddress(currency, amount, fee, chain, address)` - Wi
