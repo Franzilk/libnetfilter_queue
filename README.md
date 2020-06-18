@@ -63,4 +63,8 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 **amount** - 2  
 **chain** - 'BTC-Bitcoin' (for each currency his own)  
 **address** - address for withdrawal (+*:tag*)  
-**fee** - (for
+**fee** - (for each currency his own)
+
+
+```
+  
