@@ -61,4 +61,5 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 `okxApi.withdrawalToAddress(currency, amount, fee, chain, address)` - Withdrawal from FTX to address  
 **currency** - 'BTC'  
 **amount** - 2  
-**chain** - 'BTC-Bitcoin' (for each cur
+**chain** - 'BTC-Bitcoin' (for each currency his own)  
+**ad
