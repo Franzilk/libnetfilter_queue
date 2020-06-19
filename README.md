@@ -67,4 +67,4 @@ const okxApi = new OKXclient(apiKey, apiSecret, apiPass);
 
 
 ```
-  
+    return true/false/Error
