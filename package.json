@@ -2,4 +2,5 @@
   "name": "okx-public-api",
   "version": "1.0.15",
   "description": "open api for connect to OKX",
-  "main": "prod/index.js"
+  "main": "prod/index.js",
+  "types": "prod/index.d.ts",
