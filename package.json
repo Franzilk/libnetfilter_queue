@@ -6,4 +6,4 @@
   "types": "prod/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "
+    "format": "prettier --write \"src
