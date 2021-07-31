@@ -7,4 +7,5 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/*.ts\"",
-    "lint": "tsl
+    "lint": "tslint -p tsconfig.json",
+    "test": "j
