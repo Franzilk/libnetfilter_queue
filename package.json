@@ -10,4 +10,5 @@
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly"
+    "prepublishOnly": "npm test && npm run lint",
+    
