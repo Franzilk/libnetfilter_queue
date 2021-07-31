@@ -8,4 +8,4 @@
     "build": "tsc",
     "format": "prettier --write \"src/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "j
+    "test": "jest --config jestconfig.jso
