@@ -11,4 +11,5 @@
     "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run li
+    "preversion": "npm run lint",
+    "version": "npm r
