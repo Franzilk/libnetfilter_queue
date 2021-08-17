@@ -13,4 +13,4 @@
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "gi
+    "postversion": "git push origin master && git p
