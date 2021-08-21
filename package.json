@@ -20,4 +20,6 @@
     "api",
     "client"
   ],
-  "repos
+  "repository": {
+    "type": "git",
+   
