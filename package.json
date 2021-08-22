@@ -23,4 +23,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AparinAA/okx-public-api.git"
-  }
+  },
+  "bugs": {
+    "url":
