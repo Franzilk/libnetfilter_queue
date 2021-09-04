@@ -30,4 +30,5 @@
   "homepage": "https://github.com/AparinAA/okx-public-api.git#readme",
   "author": "X6P",
   "license": "MIT",
-  "devDependenc
+  "devDependencies": {
+    "@types/jest"
