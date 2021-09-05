@@ -31,4 +31,5 @@
   "author": "X6P",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest"
+    "@types/jest": "^28.1.4",
+    "axios": "^0.
