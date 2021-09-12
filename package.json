@@ -41,4 +41,6 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.7.4"
   },
-  "fil
+  "files": [
+    "prod/**/*"
+  ]
