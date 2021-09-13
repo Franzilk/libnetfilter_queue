@@ -29,3 +29,30 @@ export default class OKXclient {
       baseURL: 'https://www.okx.com',
       timeout: 5000,
       headers: {
+        accept: 'application/json',
+        'Content-Type': 'application/json; utf-8',
+        'OK-ACCESS-KEY': apiKey,
+        'OK-ACCESS-PASSPHRASE': passphrase,
+      },
+    });
+
+    this.instance.interceptors.request.use((config: any) => {
+      const now = new Date().toISOString();
+      const method = config.method.toUpperCase();
+      let { data, params } = config;
+      let sign: string;
+
+      if (!data) {
+        data = '';
+      } else {
+        data = JSON.stringify(data);
+      }
+
+      params = new URLSearchParams(params).toString();
+
+      sign = crypto
+        .createHmac('sha256', apiSecret)
+        .update(
+          now + method.toUpperCase() + `${config.url}` + (method === 'GET' ? (params ? `?${params}` : ``) : `${data}`),
+        )
+        .digest('base64');
