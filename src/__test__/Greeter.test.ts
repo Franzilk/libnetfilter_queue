@@ -28,3 +28,5 @@ function check (ex: any) {
 } 
 
 test('Check connect API to OKEX', async () => {
+    expect(await check(new OKXclient(secretDictOKX.api_key, secretDictOKX.secret_key, secretDictOKX.passphrase))).toBe("OKX");
+})
