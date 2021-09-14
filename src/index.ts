@@ -56,3 +56,32 @@ export default class OKXclient {
           now + method.toUpperCase() + `${config.url}` + (method === 'GET' ? (params ? `?${params}` : ``) : `${data}`),
         )
         .digest('base64');
+
+      config.headers['OK-ACCESS-TIMESTAMP'] = now;
+
+      config.headers['OK-ACCESS-SIGN'] = sign;
+
+      return config;
+    });
+  }
+
+  getName() {
+    return Promise.resolve('OKX');
+  }
+
+  // GET request
+  getRequest(endpoint: string, params: {} = {}) {
+    return this.instance
+      .get(endpoint, { params })
+      .then(
+        (result: any) => {
+          return result?.data.data[0] ?? Promise.reject({ error: 'bad GET request first step', code: -1, ex: 'OKX' });
+        },
+        (e: any) => {
+          return Promise.reject({ error: 'bad GET request first step', code: -1, ex: 'OKX' });
+        },
+      )
+      .catch(() => {
+        return Promise.reject({ error: 'bad GET request first step', code: -1, ex: 'OKX' });
+      });
+  }
