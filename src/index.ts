@@ -85,3 +85,41 @@ export default class OKXclient {
         return Promise.reject({ error: 'bad GET request first step', code: -1, ex: 'OKX' });
       });
   }
+
+  // POST request
+  postRequest(endpoint: string, data: {} = {}) {
+    return this.instance.post(endpoint, data).catch(() => {
+      return Promise.reject({ error: 'bad POST request first step', code: -1, ex: 'OKX' });
+    });
+  }
+
+  // Get balance account
+  // return list of object [ {'ccy': ccy, 'avail': amountAvailble, 'eqUsd', equelUsd} ]
+  getBalance() {
+    interface Details {
+      ccy: string;
+      frozenBal: string | number;
+      availEq: string | number;
+      eqUsd: string | number;
+    }
+    interface Balance {
+      details: Details[];
+    }
+
+    return this.getRequest('/api/v5/account/balance')
+      .then(
+        (balance: any | Balance): balanceInfo | any => {
+          if (balance?.code === -1) {
+            return Promise.reject({ error: 'bad GET request balance check', code: -1, ex: 'OKX' });
+          }
+
+          return (
+            balance?.details.map((element: Details) => {
+              return {
+                ccy: element.ccy,
+                avail: element.availEq,
+                eqUsd: element.eqUsd,
+              };
+            }) ?? Promise.reject({ error: 'bad GET request balance check', code: -1, ex: 'OKX' })
+          );
+        },
