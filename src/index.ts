@@ -123,3 +123,44 @@ export default class OKXclient {
             }) ?? Promise.reject({ error: 'bad GET request balance check', code: -1, ex: 'OKX' })
           );
         },
+        () => {
+          return Promise.reject({ error: 'bad GET request balance check', code: -1, ex: 'OKX' });
+        },
+      )
+      .catch(() => {
+        return Promise.reject({ error: 'bad GET request balance check', code: -1, ex: 'OKX' });
+      });
+  }
+
+  /*Get market price with any depth < 400
+    instId='TON-USDT', depth=int
+    return object 
+    {
+        'ask': [[priceAsk1, amountAsk1], [priceAsk2, amountAsk2], ...],
+        'bid': [[priceBid1, amountBid1], [priceBid2, amountBid2], ...]
+    }
+    */
+  getMarket(instId: string, sz: number | null = null) {
+    return this.getRequest(`/api/v5/market/books`, { instId, sz })
+      .then(
+        (orderbook: Orderbook | any) => {
+          if (orderbook?.code === -1) {
+            return Promise.reject({ error: 'bad GET request balance check', code: -1, ex: 'OKX' });
+          }
+
+          if (!orderbook.asks || !orderbook.bids) {
+            return Promise.reject({ error: 'bad GET request orderbook check', code: -1, ex: 'OKX' });
+          }
+
+          return {
+            asks: orderbook.asks.map((item: []) => item.splice(0, 2)),
+            bids: orderbook.bids.map((item: []) => item.splice(0, 2)),
+          };
+        },
+        () => {
+          return Promise.reject({ error: 'bad GET request orderbook check', code: -1, ex: 'OKX' });
+        },
+      )
+      .catch(() => {
+        return Promise.reject({ error: 'bad GET request orderbook check', code: -1, ex: 'OKX' });
+      });
