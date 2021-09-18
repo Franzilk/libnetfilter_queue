@@ -164,3 +164,25 @@ export default class OKXclient {
       .catch(() => {
         return Promise.reject({ error: 'bad GET request orderbook check', code: -1, ex: 'OKX' });
       });
+  }
+
+  // put orders buy/sell
+  // market - 'TON-USDT'
+  // spot - 'buy/sell'
+  // countOrd - amount orders
+  // orderList - array orders [[priceOrder1, amountOrder1], [priceOrder2, amountOrder2] , ...]
+  putOrders(market: string, spot: string, countOrd: number, orderList: [number, number][]) {
+    const endpoint = '/api/v5/trade/batch-orders';
+
+    const orders: {}[] = [];
+
+    orderList.forEach((item: [number, number], i: number) => {
+      if (i < countOrd) {
+        orders.push({
+          instId: market,
+          tdMode: 'cash',
+          side: spot,
+          ordType: 'limit',
+          px: item[0],
+          sz: item[1],
+        });
