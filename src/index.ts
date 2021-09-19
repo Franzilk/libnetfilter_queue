@@ -186,3 +186,22 @@ export default class OKXclient {
           px: item[0],
           sz: item[1],
         });
+      }
+    });
+
+    return this.postRequest(endpoint, orders)
+      .then(
+        (r: any) => {
+          if (r.code !== 0) {
+            return false;
+          }
+          return true;
+        },
+        () => {
+          return Promise.reject({ error: 'bad POST request order put', code: -1, ex: 'OKX' });
+        },
+      )
+      .catch(() => {
+        return Promise.reject({ error: 'bad POST request order put', code: -1, ex: 'OKX' });
+      });
+  }
