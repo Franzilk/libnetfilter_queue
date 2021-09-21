@@ -205,3 +205,26 @@ export default class OKXclient {
         return Promise.reject({ error: 'bad POST request order put', code: -1, ex: 'OKX' });
       });
   }
+
+  // Transfer within account
+  // curryncy - 'TON' , amount - amount (+fee if to main + withdrawal)
+  // TradeAcc = "18"
+  // MainAcc = "6"
+  transferCurrAcc(currency: string, amount: number | string, from: number | string, to: number | string) {
+    // body for transfer within account
+    const bodyTransfer = {
+      ccy: currency,
+      amt: amount,
+      from,
+      to,
+    };
+    return this.postRequest('/api/v5/asset/transfer', bodyTransfer).catch(() => {
+      return Promise.reject({ error: 'bad POST request transfer', code: -1, ex: 'OKX' });
+    });
+  }
+  // Withdrawal from FTX to address
+  // currency - 'TON'
+  // amount - 130
+  // chain - 'TON-TON' (for each currency his own)
+  // address - address for withdrawal (+:tag)
+  // fee - (for each currency his own)
