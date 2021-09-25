@@ -228,3 +228,18 @@ export default class OKXclient {
   // chain - 'TON-TON' (for each currency his own)
   // address - address for withdrawal (+:tag)
   // fee - (for each currency his own)
+  withdrawalToAddress(currency: string, amount: number | string, fee: number | string, chain: string, address: string) {
+    // body for withdrawal
+    const bodyWithdrawal = {
+      amt: '' + amount,
+      fee,
+      dest: '4',
+      ccy: currency,
+      chain,
+      toAddr: address,
+    };
+    return this.postRequest('/api/v5/asset/withdrawal', bodyWithdrawal).catch(() => {
+      return Promise.reject({ error: 'bad POST request whidrawal', code: -1, ex: 'OKX' });
+    });
+  }
+}
