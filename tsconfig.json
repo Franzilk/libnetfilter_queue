@@ -3,4 +3,4 @@
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
-    // "incremental": true,                              /* Save .tsbuildinfo files to allow for increme
+    // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. *
