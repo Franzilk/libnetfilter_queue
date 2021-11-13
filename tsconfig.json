@@ -10,4 +10,5 @@
     // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
     // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
 
-    /* Language and Envi
+    /* Language and Environment */
+    "target": "
