@@ -24,4 +24,5 @@
     // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
-    /* Modul
+    /* Modules */
+    "module": "commonjs",   
