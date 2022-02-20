@@ -25,4 +25,4 @@
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    "module": "commonjs",                                /*
+    "module": "commonjs",                                /* Specify what module code is g
