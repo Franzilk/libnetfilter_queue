@@ -26,4 +26,4 @@
 
     /* Modules */
     "module": "commonjs",                                /* Specify what module code is generated. */
-    // "rootDir": "./",                             
+    // "rootDir": "./",                                  /* Specify the root folder w
