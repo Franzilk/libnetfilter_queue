@@ -39,4 +39,4 @@
     // "noResolve": true,                                /* Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project. */
 
     /* JavaScript Support */
-    "allowJs": true,                           
+    "allowJs": true,                                  /* Allow JavaScript file
