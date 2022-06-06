@@ -44,4 +44,5 @@
     // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
 
     /* Emit */
-    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript fi
+    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    // "d
