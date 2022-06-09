@@ -45,4 +45,4 @@
 
     /* Emit */
     "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-    // "declarationMap": true,                  
+    // "declarationMap": true,                           /* Create sourcemaps for d.
