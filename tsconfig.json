@@ -68,4 +68,5 @@
     // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
     // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
 
-    /* Interop Const
+    /* Interop Constraints */
+    // "isolatedModu
