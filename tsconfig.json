@@ -69,4 +69,4 @@
     // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
 
     /* Interop Constraints */
-    // "isolatedModules": true,                          /* Ensure that each file can be
+    // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without
