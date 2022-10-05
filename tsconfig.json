@@ -70,4 +70,4 @@
 
     /* Interop Constraints */
     // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
-    // "allowSyn
+    // "allowSyntheticDefaultImports": true,   
