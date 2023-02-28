@@ -92,4 +92,4 @@
     // "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
     // "noUncheckedIndexedAccess": true,                 /* Add 'undefined' to a type when accessed using an index. */
     // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
-    // "noPropertyAccessF
+    // "noPropertyAccessFromIndexSignature": true
