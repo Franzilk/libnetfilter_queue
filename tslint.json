@@ -1,2 +1,3 @@
 {
-    "extends": ["tslint:recommended", "tsl
+    "extends": ["tslint:recommended", "tslint-config-prettier"]
+}
